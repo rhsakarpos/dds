@@ -29,6 +29,6 @@ public class Group_topics
     @Override
     public String toString()
     {
-        return "Group_topics [urlkey = "+urlkey+", topic_name = "+topic_name+"]";
+        return "\n\tGroup_topics [\n\t\turlkey = "+urlkey+", \n\t\ttopic_name = "+topic_name+"]";
     }
 }

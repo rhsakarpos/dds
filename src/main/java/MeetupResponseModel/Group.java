@@ -101,6 +101,7 @@ public class Group
     @Override
     public String toString()
     {
-        return "Group [group_topics = "+group_topics+", group_city = "+group_city+", group_country = "+group_country+", group_id = "+group_id+", group_name = "+group_name+", group_lon = "+group_lon+", group_urlname = "+group_urlname+", group_lat = "+group_lat+"]";
+        return "\n\tGroup [\n\t\tgroup_topics = "+group_topics+", \n\t\tgroup_city = "+group_city+", \n\t\tgroup_country = "+group_country+", \n\t\tgroup_id = "+group_id
+                +", \n\t\tgroup_name = "+group_name+", \n\t\tgroup_lon = "+group_lon+", \n\t\tgroup_urlname = "+group_urlname+", \n\t\tgroup_lat = "+group_lat+"]";
     }
 }

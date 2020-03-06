@@ -41,6 +41,6 @@ public class Member
     @Override
     public String toString()
     {
-        return "Member [member_id = "+member_id+", photo = "+photo+", member_name = "+member_name+"]";
+        return "\n\tMember [\n\t\tmember_id = "+member_id+", \n\t\tphoto = "+photo+", \n\t\tmember_name = "+member_name+"]";
     }
 }

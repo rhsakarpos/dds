@@ -53,6 +53,6 @@ public class Venue
     @Override
     public String toString()
     {
-        return "Venue [venue_name = "+venue_name+", lon = "+lon+", lat = "+lat+", venue_id = "+venue_id+"]";
+        return "\n\tVenue [\n\t\tvenue_name = "+venue_name+", \n\t\tlon = "+lon+", \n\t\tlat = "+lat+", \n\t\tvenue_id = "+venue_id+"]";
     }
 }

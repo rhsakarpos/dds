@@ -53,6 +53,6 @@ public class Event
     @Override
     public String toString()
     {
-        return "Event [event_id = "+event_id+", event_name = "+event_name+", time = "+time+", event_url = "+event_url+"]";
+        return "\n\tEvent [\n\t\tevent_id = "+event_id+", \n\t\tevent_name = "+event_name+", \n\t\ttime = "+time+", \n\t\tevent_url = "+event_url+"]";
     }
 }

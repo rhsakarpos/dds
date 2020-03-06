@@ -94,6 +94,7 @@ public class MeetupRSVP {
 
     @Override
     public String toString() {
-        return "MeetupRSVP [venue = " + venue + ", visibility = " + visibility + ", response = " + response + ", guests = " + guests + ", member = " + member + ", rsvp_id = " + rsvp_id + ", mtime = " + mtime + ", event = " + event + ", group = " + group + "]";
+        return "MeetupRSVP [\n\tvenue = " + venue + ", \n\tvisibility = " + visibility + ", \n\tresponse = " + response + ", \n\tguests = " + guests
+                + ", \n\tmember = " + member + ", \n\trsvp_id = " + rsvp_id + ", \n\tmtime = " + mtime + ", \n\tevent = " + event + ", \n\tgroup = " + group + "]";
     }
 }

@@ -16,9 +16,8 @@ public class StreamToTopicWriter {
         Properties kafkaProps = new Properties();
 
         String defaultClusterValue = "localhost:9092";
-        String kafkaCluster = System.getProperty(KAFKA_CLUSTER_ENV_VAR_NAME, defaultClusterValue);
 
-        kafkaProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaCluster);
+        kafkaProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, defaultClusterValue);
         kafkaProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         kafkaProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         kafkaProps.put(ProducerConfig.ACKS_CONFIG, "0");
@@ -53,6 +52,11 @@ public class StreamToTopicWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void WriteToKafkaStream(String key, String value)
+    {
+
     }
 
     public void WriteToKafkaTopic(String key, String value) {
