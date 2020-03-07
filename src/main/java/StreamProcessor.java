@@ -6,6 +6,7 @@ import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.KStreamBuilder;
 
+import java.io.IOException;
 import java.util.Properties;
 import java.util.regex.Pattern;
 
@@ -19,6 +20,13 @@ public class StreamProcessor {
             MeetupRSVP rsvp = MeetupFeedJsonParser.ParseJson(value);
             AWSObjectUploader.uploadObjectToBucket("dds-stream", rsvp.toString());
             return true;
+        }
+        System.out.println("\traw value : " + value);
+        MeetupRSVP rsvp = MeetupFeedJsonParser.ParseJson(value);
+        try {
+            GCPObjectUploader.uploadObjectToBucket("dds-stream", rsvp.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return false;
     }
